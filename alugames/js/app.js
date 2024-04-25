@@ -1,7 +1,7 @@
 function alterarStatus(id) {
 var gameClicado = document.getElementById (`game-${id}`); // recuperar o que o usuário clicou.
 var img = gameClicado.querySelector('.dashboard__item__img'); //recuperando o elemento da imagem do jogo.
-var buton = gameClicado.querySelector('.dashboard__item__button'); // recuperemando o elemento do botão clicado.
+var buton = gameClicado.querySelector('.dashboard__item__button'); // recuperando o elemento do botão clicado.
 
 if (img.classList.contains('dashboard__item__img--rented')) {
     img.classList.remove('dashboard__item__img--rented'); // Estamos chamando a variável img e pedindo para remover uma classe da lista de classe das imagens, em específico, estamos removendo o aspecto de cor mais apagada quando clicammos no botão para sinalizar que o jogo pode ser alugado novamente.
