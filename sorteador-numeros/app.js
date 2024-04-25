@@ -4,6 +4,14 @@ function sortear() {
     var doNumero = parseInt(document.getElementById('de').value);
     var ateNumero = parseInt(document.getElementById('ate').value); 
 
+    if (doNumero >= ateNumero) {
+        alert ('Você está tentando inverter a ordem do sorteador. O campo "Do Número" deve ser inferior ao campo "Até o número"');
+        return; // ao chamar return sem nenhum argumento, o computador entende que não é necessário eecutar mais o cóigo, até que o usuário insira os valores corretamente. e Assim não executa nada até que seja corrigido.
+    }
+    if (quantidadeDeNumeros > (ateNumero - doNumero + 1)) {
+        alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do Número" até o campo "Até o número"');
+        return;
+    }
     var sorteados = [];
     var numero;
 
@@ -11,6 +19,7 @@ function sortear() {
         numero = gerarNumeroAleatorio (doNumero, ateNumero);
         while (sorteados.includes(numero)) {        //.includes verifica na array sorteados se o argumento "numero" ja foi sorteado, e retorna um booleano (verdadeiro ou falso).
             numero = gerarNumeroAleatorio(doNumero, ateNumero);
+        
         }
         sorteados.push(numero);
 
@@ -44,3 +53,5 @@ function reiniciar(){
     document.getElementById('resultado').innerHTML = `<label class="texto__paragrafo">Números sorteados:  nenhum até agora</label>`
     alterarStatusBotao();
 }
+
+
