@@ -1,6 +1,6 @@
-var totalGeral = 0;
-document.getElementById('lista-produtos').innerHTML = '';
-document.getElementById('valor-total').textContent = 'R$0';
+// chamando a função de limpar para que a página seja iniciada com tudo zeradinho 
+var totalGeral;
+limpar();
 
 
 
@@ -32,13 +32,10 @@ var campoTotal = document.getElementById('valor-total');
 campoTotal.textContent = `R$ ${totalGeral}`;
 document.getElementById('quantidade').value = 0; // limpando a quantidade após pressionar botão de adicionar
 
-
-
 }
 
 function limpar () {
-    document.getElementById('quantidade') = '';
-    var totalGeral = 0;
+totalGeral = 0;
 document.getElementById('lista-produtos').innerHTML = '';
 document.getElementById('valor-total').textContent = 'R$0';
 
