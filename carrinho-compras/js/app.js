@@ -1,4 +1,8 @@
 var totalGeral = 0;
+document.getElementById('lista-produtos').innerHTML = '';
+document.getElementById('valor-total').textContent = 'R$0';
+
+
 
 function adicionar() {
 
@@ -26,6 +30,7 @@ CestaProdutos.innerHTML = CestaProdutos.innerHTML + `<section class="carrinho__p
 totalGeral = totalGeral + preco;
 var campoTotal = document.getElementById('valor-total');
 campoTotal.textContent = `R$ ${totalGeral}`;
+document.getElementById('quantidade').value = 0; // limpando a quantidade após pressionar botão de adicionar
 
 
 
@@ -33,8 +38,12 @@ campoTotal.textContent = `R$ ${totalGeral}`;
 
 function limpar () {
     document.getElementById('quantidade') = '';
-    document.getElementById('valor-total') = '';
+    var totalGeral = 0;
+document.getElementById('lista-produtos').innerHTML = '';
+document.getElementById('valor-total').textContent = 'R$0';
+
 }
+
 
 
 
