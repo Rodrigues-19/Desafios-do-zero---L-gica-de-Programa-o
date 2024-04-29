@@ -8,6 +8,11 @@ alert('Informe o nome completo do amigo!');
 return;
 } 
 
+if (amigos.includes == nomeAmigo.value) {
+alert('Nome já adicionado!');
+return;
+}
+
 var listaAmigos = document.getElementById('lista-amigos');
 
 amigos.push(nomeAmigo.value) // .push adiciona elementos dentro da Array "amigos".
