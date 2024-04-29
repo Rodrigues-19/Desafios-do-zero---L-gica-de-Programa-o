@@ -4,13 +4,19 @@ function comprar() {
 
 // alert(ingresso.value);
 //alert(quantidade.value);
+
+if (qtd >= 0) {
     if (tipo.value == 'pista') {
-    comprarPista(qtd);
-  } else if (tipo.value == 'superior') {
-    comprarSuperior(qtd);
-  } else {
-    comprarInferior(qtd);
-  }
+        comprarPista(qtd);
+      } else if (tipo.value == 'superior') {
+        comprarSuperior(qtd);
+      } else {
+        comprarInferior(qtd);
+      }
+} else {
+    alert ('a Quantidade deve ser positiva!')
+}
+    
 }
 
 
