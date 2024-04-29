@@ -2,6 +2,12 @@ amigos = [];
 
 function adicionar() {
 var nomeAmigo = document.getElementById('nome-amigo');
+
+if (nomeAmigo.value == '') {
+alert('Informe o nome completo do amigo!');
+return;
+} 
+
 var listaAmigos = document.getElementById('lista-amigos');
 
 amigos.push(nomeAmigo.value) // .push adiciona elementos dentro da Array "amigos".
@@ -15,6 +21,11 @@ nomeAmigo.value = '';
 }
 
 function sortear() {
+    if (amigos.length < 4) {
+alert ('Adicione pelo menos 4 amigos!');
+return;
+    }
+
     embaralha(amigos);
     var sorteio = document.getElementById('lista-sorteio');
     for(var i = 0; i < amigos.length; i++ ) {  // o for percorre o array inteiro.
