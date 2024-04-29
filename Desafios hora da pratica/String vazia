@@ -1,0 +1,6 @@
+function validarseEString(texto) {
+    return texto === "" ? "String vazia" : "Há um texto"
+}
+
+console.log (validarseEString("Aqui jaz um texto"));
+console.log(validarString(''));
